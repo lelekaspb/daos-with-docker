@@ -31,8 +31,8 @@ daos-frontend/notes.txt
 
 ##### backend #####
 # compiled output
-daos-backend//dist
-daos-backend//node_modules
+daos-backend/dist
+daos-backend/node_modules
 
 # Logs
 daos-backend/logs
@@ -47,11 +47,11 @@ daos-backend/lerna-debug.log*
 daos-backend/.DS_Store
 
 # Tests
-daos-backend//coverage
-daos-backend//.nyc_output
+daos-backend/coverage
+daos-backend/.nyc_output
 
 # IDEs and editors
-daos-backend//.idea
+daos-backend/.idea
 daos-backend/.project
 daos-backend/.classpath
 daos-backend/.c9/

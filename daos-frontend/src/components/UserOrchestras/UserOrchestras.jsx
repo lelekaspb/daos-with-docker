@@ -12,8 +12,8 @@ const UserOrchestras = () => {
 
   useEffect(() => {
     const fetchAllOrchestras = async () => {
-      // const url = "http://127.0.0.1:3007/orchestra";
-      const url = "https://daos.onrender.com/orchestra";
+      const url = "http://127.0.0.1:3007/orchestra";
+      // const url = "https://daos.onrender.com/orchestra";
       const options = {
         method: "GET",
         headers: {
@@ -75,8 +75,8 @@ const UserOrchestras = () => {
   const deleteMember = async (event) => {
     const orchestraId = event.target.dataset.orchestra;
     const userId = event.target.dataset.user;
-    // const url = `http://127.0.0.1:3007/orchestra/${orchestraId}/members/${userId}`;
-    const url = `https://daos.onrender.com/orchestra/${orchestraId}/members/${userId}`;
+    const url = `http://127.0.0.1:3007/orchestra/${orchestraId}/members/${userId}`;
+    // const url = `https://daos.onrender.com/orchestra/${orchestraId}/members/${userId}`;
     const options = {
       method: "DELETE",
       headers: {

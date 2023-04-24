@@ -30,8 +30,8 @@ const UserSettings = () => {
 
   const submitPasswordChange = async (event) => {
     event.preventDefault();
-    // const url = `http://127.0.0.1:3007/user/${userInfo.id}/settings`;
-    const url = `https://daos.onrender.com/user/${userInfo.id}/settings`;
+    const url = `http://127.0.0.1:3007/user/${userInfo.id}/settings`;
+    // const url = `https://daos.onrender.com/user/${userInfo.id}/settings`;
     const options = {
       method: "PUT",
       headers: {
@@ -64,8 +64,8 @@ const UserSettings = () => {
 
   const submitDeletingProfile = async (event) => {
     event.preventDefault();
-    // const url = `http://127.0.0.1:3007/user/${userInfo.id}`;
-    const url = `https://daos.onrender.com/user/${userInfo.id}`;
+    const url = `http://127.0.0.1:3007/user/${userInfo.id}`;
+    // const url = `https://daos.onrender.com/user/${userInfo.id}`;
     const options = {
       method: "DELETE",
       headers: {

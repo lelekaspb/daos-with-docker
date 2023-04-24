@@ -16,8 +16,8 @@ const AllPosts = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      // const url = `http://127.0.0.1:3007/post/find`;
-      const url = `https://daos.onrender.com/post/find`;
+      const url = `http://127.0.0.1:3007/post/find`;
+      // const url = `https://daos.onrender.com/post/find`;
       const options = {
         method: "POST",
         headers: {

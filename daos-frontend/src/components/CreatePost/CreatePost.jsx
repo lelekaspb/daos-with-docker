@@ -87,8 +87,8 @@ const CreatePost = () => {
   };
 
   const createPost = async () => {
-    // const url = `http://127.0.0.1:3007/post`;
-    const url = `https://daos.onrender.com/post`;
+    const url = `http://127.0.0.1:3007/post`;
+    // const url = `https://daos.onrender.com/post`;
     const options = {
       method: "POST",
       headers: {

@@ -31,7 +31,7 @@ const Footer = () => {
         <div className={styles.music}></div>
         <div className={styles.brand}></div>
       </div>
-      <div className={styles.privacy}>Privatlivspolitik</div>
+      <div className={styles.privacy}>Study project, Cphbusiness, 2023</div>
     </footer>
   );
 };

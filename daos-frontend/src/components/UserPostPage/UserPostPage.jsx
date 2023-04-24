@@ -21,8 +21,8 @@ const UserPostPage = () => {
   const [loading, setLoading] = useState(false);
 
   const deletePost = async (event) => {
-    // const url = `http://127.0.0.1:3007/post/${postId}`;
-    const url = `https://daos.onrender.com/post/${postId}`;
+    const url = `http://127.0.0.1:3007/post/${postId}`;
+    // const url = `https://daos.onrender.com/post/${postId}`;
     const options = {
       method: "DELETE",
       headers: {

@@ -38,8 +38,8 @@ const UserProfile = () => {
   };
 
   const deleteGenreInDb = async (instrumentObject) => {
-    // const url = `http://127.0.0.1:3007/user/${userInfo.id}/instrument`;
-    const url = `https://daos.onrender.com/user/${userInfo.id}/instrument`;
+    const url = `http://127.0.0.1:3007/user/${userInfo.id}/instrument`;
+    // const url = `https://daos.onrender.com/user/${userInfo.id}/instrument`;
     const options = {
       method: "PUT",
       headers: {
