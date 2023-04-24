@@ -1,0 +1,70 @@
+.main {
+  background-color: var(--greyish-bg-color);
+  flex-grow: 1;
+}
+
+.content {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.page_heading {
+  composes: heading from "./../../styleUtils.css";
+  color: var(--primary-font-color);
+  font-size: var(--title-font-size);
+  font-weight: 500;
+}
+
+.submit_btn {
+  composes: btn_primary from "./../../styleUtils.css";
+  font-size: calc(0.8rem + 0.3vw);
+  width: 100%;
+  cursor: pointer;
+}
+
+.submit_btn a {
+  color: var(--white-color);
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.name_fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name_fields > * {
+  width: 48%;
+}
+
+/************** media queries **************/
+@media only screen and (max-width: 550px) {
+  .content {
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .content {
+    max-width: 300px;
+  }
+
+  .name_fields {
+    flex-direction: column;
+  }
+
+  .name_fields > * {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .content {
+    max-width: 280px;
+  }
+}

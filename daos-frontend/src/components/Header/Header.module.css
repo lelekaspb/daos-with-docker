@@ -1,0 +1,108 @@
+.header {
+  min-height: 60px;
+  border-bottom: solid var(--border-bottom-color) 1px;
+  padding: 10px 0;
+  /* position: relative; */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+
+.nav_left {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo_link {
+  text-decoration: none;
+}
+
+.logo {
+  composes: heading from "./../../styleUtils.css";
+  color: var(--red-color);
+  font-size: calc(1.5rem + 0.3vw);
+  font-weight: 500;
+}
+
+.description {
+  color: var(--primary-font-color);
+  font-size: calc(0.7rem + 0.3vw);
+  font-weight: 400;
+}
+
+.nav_desktop {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav_link a,
+.nav_btn_signup a,
+.nav_btn_login a {
+  text-decoration: none;
+}
+
+.nav_link a {
+  color: var(--primary-font-color);
+  font-weight: 600;
+}
+
+.nav_btn_signup {
+  composes: btn_primary from "./../../styleUtils.css";
+  text-decoration: none;
+}
+
+.nav_btn_login {
+  composes: btn_outline from "./../../styleUtils.css";
+  text-decoration: none;
+}
+
+.nav_btn_logout {
+  background-color: var(--white-color);
+  color: var(--primary-font-color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: calc(0.8rem + 0.2vw);
+  box-shadow: 0 0 1px 1px #d9d9d9;
+  border: none;
+  cursor: pointer;
+}
+
+.link {
+  color: var(--primary-font-color);
+  text-decoration: none;
+  padding-bottom: 1px;
+  background: linear-gradient(
+      var(--primary-font-color),
+      var(--primary-font-color)
+    )
+    center bottom;
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  transition: all 0.4s;
+  padding-bottom: 0.4rem;
+}
+
+.underline {
+  background-size: 100% 1px;
+}
+
+/************** media queries **************/
+@media only screen and (max-width: 1000px) {
+  .nav_desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .nav {
+    margin: 0 10px;
+  }
+}

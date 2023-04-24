@@ -1,0 +1,122 @@
+.mainWrapper {
+  display: flex;
+  justify-content: space-between;
+  min-height: calc(100vh - 260px);
+  padding: 50px 50px 50px 50px;
+  display: grid;
+  grid-template-columns: 0.7fr 0.3fr;
+  align-items: center;
+  column-gap: 100px;
+}
+.contentWrapper {
+  padding: 0 50px;
+}
+
+.pageTitle {
+  margin-bottom: 20px;
+}
+
+.pageTitleText {
+  composes: heading from "./../../styleUtils.css";
+  color: var(--red-color);
+  font-size: 60px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.imageWrapper img {
+  width: 317px;
+  height: 317px;
+}
+.main_dropdown {
+  display: flex;
+}
+.seOpslag_btn {
+  background-color: var(--primary-font-color);
+  color: var(--white-color);
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.select {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 1px 1px #d9d9d9;
+  padding: 0.7rem 0.5rem;
+  margin-bottom: 10px;
+  min-width: 200px;
+}
+
+.select::placeholder {
+  font-family: var(--primary-font);
+  font-size: var(--body-font-size);
+  color: var(--bodytext-font-color);
+}
+
+.select {
+  font-family: var(--primary-font);
+  font-size: var(--body-font-size);
+  color: var(--primary-font-color);
+}
+
+.select:focus,
+.select:active {
+  outline: 1px solid var(--primary-font-color);
+}
+
+.selectInstrumentsForm {
+  display: block;
+}
+
+/************** media queries **************/
+@media only screen and (max-width: 1250px) {
+  .mainWrapper {
+    column-gap: 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .imageWrapper {
+    display: none;
+  }
+
+  .mainWrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .contentWrapper {
+    padding: 0;
+  }
+
+  .pageTitleText {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .selectInstrumentsForm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .seOpslag_btn {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .mainWrapper {
+    padding: 0 20px 20px 20px;
+  }
+
+  .pageTitleText {
+    font-size: 42px;
+  }
+}

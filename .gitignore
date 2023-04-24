@@ -1,0 +1,70 @@
+##### frontend #####
+# Logs
+daos-frontend/logs
+daos-frontend/*.log
+daos-frontend/npm-debug.log*
+daos-frontend/yarn-debug.log*
+daos-frontend/yarn-error.log*
+daos-frontend/pnpm-debug.log*
+daos-frontend/lerna-debug.log*
+
+daos-frontend/node_modules
+daos-frontend/dist
+daos-frontend/dist-ssr
+daos-frontend/*.local
+
+# Editor directories and files
+daos-frontend/.vscode/*
+daos-frontend/!.vscode/extensions.json
+daos-frontend/.idea
+daos-frontend/.DS_Store
+daos-frontend/*.suo
+daos-frontend/*.ntvs*
+daos-frontend/*.njsproj
+daos-frontend/*.sln
+daos-frontend/*.sw?
+
+daos-frontend/node_modules/
+
+daos-frontend/notes.txt
+
+
+##### backend #####
+# compiled output
+daos-backend//dist
+daos-backend//node_modules
+
+# Logs
+daos-backend/logs
+daos-backend/*.log
+daos-backend/npm-debug.log*
+daos-backend/pnpm-debug.log*
+daos-backend/yarn-debug.log*
+daos-backend/yarn-error.log*
+daos-backend/lerna-debug.log*
+
+# OS
+daos-backend/.DS_Store
+
+# Tests
+daos-backend//coverage
+daos-backend//.nyc_output
+
+# IDEs and editors
+daos-backend//.idea
+daos-backend/.project
+daos-backend/.classpath
+daos-backend/.c9/
+daos-backend/*.launch
+daos-backend/.settings/
+daos-backend/*.sublime-workspace
+
+# IDE - VSCode
+daos-backend/.vscode/*
+daos-backend/!.vscode/settings.json
+daos-backend/!.vscode/tasks.json
+daos-backend/!.vscode/launch.json
+daos-backend/!.vscode/extensions.json
+
+daos-backend/.env
+

@@ -1,0 +1,118 @@
+.main {
+  flex-grow: 1;
+  background-color: var(--greyish-bg-color);
+}
+
+.content {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.page_heading {
+  composes: heading from "./../../styleUtils.css";
+  color: var(--primary-font-color);
+  font-size: var(--title-font-size);
+  font-weight: 500;
+}
+
+.label {
+  color: var(--primary-font-color);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.select_instrument_field {
+  margin-bottom: 30px;
+}
+
+.genre_form_field,
+.select_instrument_field {
+  display: flex;
+  flex-direction: column;
+}
+
+.select {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 1px 1px #d9d9d9;
+  padding: 0.7rem 0.5rem;
+  margin-bottom: 10px;
+}
+
+.select.error {
+  box-shadow: 0 0 1px 1px var(--red-color);
+}
+
+.select::placeholder {
+  font-family: var(--primary-font);
+  font-size: var(--body-font-size);
+  color: var(--bodytext-font-color);
+}
+
+.select {
+  font-family: var(--primary-font);
+  font-size: var(--body-font-size);
+  color: var(--primary-font-color);
+}
+
+.select:focus,
+.select:active {
+  outline: 1px solid var(--primary-font-color);
+}
+
+.help_block {
+  color: var(--red-color);
+  font-size: calc(0.6rem + 0.3vw);
+  height: 20px;
+  transition: all 0.2s;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.shown {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.2s;
+}
+
+.instrument_genres {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 10px;
+}
+
+.submit_btn {
+  composes: btn_primary from "./../../styleUtils.css";
+  font-size: calc(0.8rem + 0.3vw);
+  width: 100%;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+/************** media queries **************/
+@media only screen and (max-width: 550px) {
+  .content {
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .content {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .content {
+    max-width: 280px;
+  }
+}
