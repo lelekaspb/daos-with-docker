@@ -13,6 +13,7 @@ import { PostModule } from './post/post.module';
     MongooseModule.forRootAsync({
       useFactory: () => ({
         uri: process.env.connection_string,
+        // uri: process.env.mongooseAtlasConnectionString,
       }),
     }),
     OrchestraModule,

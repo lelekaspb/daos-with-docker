@@ -1,4 +1,11 @@
-import { Controller, Post, UseGuards, Body, HttpCode } from '@nestjs/common';
+import {
+  Controller,
+  Post,
+  UseGuards,
+  Body,
+  HttpCode,
+  Get,
+} from '@nestjs/common';
 import { LocalAuthGuard } from './auth/local-auth.guard';
 import { AuthService } from './auth/auth.service';
 import { LoginDto } from './auth/login.dto';
@@ -13,5 +20,10 @@ export class AppController {
   login(@Body() loginDto: LoginDto) {
     const response = this.authService.login(loginDto);
     return response;
+  }
+
+  @Get()
+  getHello() {
+    return 'Hello from DAOS app!';
   }
 }

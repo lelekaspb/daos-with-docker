@@ -58,7 +58,7 @@ const AddInstrument = () => {
   };
 
   const postInstrument = async () => {
-    const url = `http://127.0.0.1:3007/user/${userInfo.id}/instrument`;
+    const url = `http://localhost:5000/user/${userInfo.id}/instrument`;
     // const url = `https://daos.onrender.com/user/${userInfo.id}/instrument`;
     const options = {
       method: "POST",

@@ -71,7 +71,7 @@ const EditUserProfile = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const url = `http://127.0.0.1:3007/user/${userInfo.id}`;
+    const url = `http://localhost:5000/user/${userInfo.id}`;
     // const url = `https://daos.onrender.com/user/${userInfo.id}`;
     const options = {
       method: "PUT",

@@ -5,9 +5,52 @@ services:
     build: ./daos-frontend
     image: frontimage
     container_name: frontcontainer
-    restart: unless-stopped
-    environment:
-      NODE_ENV: "production"
+    restart: always
+    # environment:
+    #   NODE_ENV: "production"
+    depends_on:
+      - backend
     ports:
       - "3000:3000"
     command: bash -c " npm run dev"
+    # volumes:
+    #   - ./:/app
+    networks:
+      - frontbacknetwork
+  backend:
+    build: ./daos-backend
+    image: backimage
+    container_name: backcontainer
+    restart: always
+    ports:
+      - "5000:3007"
+    environment:
+      connection_string: mongodb://mongodb:27017/users?directConnection=true
+      port: 3007
+      jwt_secret: dragons
+    depends_on:
+      - mongodb
+    volumes:
+      - .:/src
+    networks:
+      - backdbnetwork
+      - frontbacknetwork
+  mongodb:
+    image: mongo
+    container_name: mongocontainer
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - dbdata:/data/db
+    networks:
+      - backdbnetwork
+
+volumes:
+  dbdata:
+
+networks:
+  backdbnetwork:
+    driver: bridge
+  frontbacknetwork:
+    driver: bridge

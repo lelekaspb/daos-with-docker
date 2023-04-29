@@ -29,7 +29,7 @@ const PostPage = () => {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const url = `http://127.0.0.1:3007/post/${postId}`;
+      const url = `http://localhost:5000/post/${postId}`;
       // const url = `https://daos.onrender.com/post/${postId}`;
       const options = {
         method: "GET",
