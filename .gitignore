@@ -68,3 +68,6 @@ daos-backend/!.vscode/extensions.json
 
 daos-backend/.env
 
+
+.env
+

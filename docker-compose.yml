@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.7"
 
 services:
   frontend:
@@ -14,7 +14,9 @@ services:
       - "3000:3000"
     command: bash -c " npm run dev"
     # volumes:
-    #   - ./:/app
+    #   - ./daos-frontend:/app
+    volumes:
+      - frontenddata:/data/frontend
     networks:
       - frontbacknetwork
   backend:
@@ -30,8 +32,10 @@ services:
       jwt_secret: dragons
     depends_on:
       - mongodb
+    # volumes:
+    #   - ./daos-backend:/app
     volumes:
-      - .:/src
+      - backenddata:/data/backend
     networks:
       - backdbnetwork
       - frontbacknetwork
@@ -48,7 +52,18 @@ services:
 
 volumes:
   dbdata:
-
+  frontenddata:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${ABSOLUTE_PATH}/daos-frontend
+      o: bind
+  backenddata:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${ABSOLUTE_PATH}/daos-backend
+      o: bind
 networks:
   backdbnetwork:
     driver: bridge
