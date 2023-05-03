@@ -5,25 +5,17 @@ services:
     build: ./daos-frontend
     image: frontimage
     container_name: frontcontainer
-    restart: always
-    # environment:
-    #   NODE_ENV: "production"
+    restart: unless-stopped
     depends_on:
       - backend
     ports:
       - "3000:3000"
     command: bash -c " npm run dev"
-    # volumes:
-    #   - ./daos-frontend:/app
-    volumes:
-      - frontenddata:/data/frontend
-    networks:
-      - frontbacknetwork
   backend:
     build: ./daos-backend
     image: backimage
     container_name: backcontainer
-    restart: always
+    restart: unless-stopped
     ports:
       - "5000:3007"
     environment:
@@ -32,13 +24,8 @@ services:
       jwt_secret: dragons
     depends_on:
       - mongodb
-    # volumes:
-    #   - ./daos-backend:/app
-    volumes:
-      - backenddata:/data/backend
     networks:
       - backdbnetwork
-      - frontbacknetwork
   mongodb:
     image: mongo
     container_name: mongocontainer
@@ -52,20 +39,6 @@ services:
 
 volumes:
   dbdata:
-  frontenddata:
-    driver: local
-    driver_opts:
-      type: none
-      device: ${ABSOLUTE_PATH}/daos-frontend
-      o: bind
-  backenddata:
-    driver: local
-    driver_opts:
-      type: none
-      device: ${ABSOLUTE_PATH}/daos-backend
-      o: bind
 networks:
   backdbnetwork:
-    driver: bridge
-  frontbacknetwork:
     driver: bridge
